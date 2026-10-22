@@ -1,31 +1,40 @@
 # GTSRB Traffic Sign Classification with ResNet18
 
-A deep learning project for traffic sign classification using **ResNet18 fine-tuning** and **PyTorch** on the German Traffic Sign Recognition Benchmark (GTSRB).
+A deep learning project using **ResNet18 fine-tuning and transfer learning** to classify traffic signs from the German Traffic Sign Recognition Benchmark (GTSRB) dataset.
 
 ## Dataset Preview
 
-![GTSRB traffic sign samples](https://raw.githubusercontent.com/DYsop/traffic-sign-recognition/main/docs/figures/gtsrb_samples.png)
+<img width="479" height="477" alt="image" src="https://github.com/user-attachments/assets/dd25d345-d79a-4c65-bba7-1e6d3ff93b3d" />
 
-The GTSRB dataset contains over 50,000 real-world traffic sign images across 43 classes, including speed limits, warning signs, and mandatory signs.
+The GTSRB dataset contains more than **50,000 images across 43 traffic sign classes**, including speed limits, warning signs, and mandatory instructions.
 
-- **Task:** Multi-class image classification
-- **Dataset:** [GTSRB — Official Website](https://benchmark.ini.rub.de/gtsrb_dataset.html)
+- **Dataset:** [German Traffic Sign Recognition Benchmark](https://benchmark.ini.rub.de/gtsrb_dataset.html)
 - **Model:** ResNet18
 - **Framework:** PyTorch
 - **Approach:** Transfer learning and fine-tuning
+- **Task:** Multi-class image classification
+- **Test Accuracy:** Approximately **91%**
 
-## Project Objective
+## Methodology
 
-Fine-tune a pretrained ResNet18 model to recognize and classify German traffic signs from images.
+- Applied image transformations compatible with pretrained ResNet18.
+- Used transfer learning with a pretrained ImageNet model.
+- Froze and unfroze model layers during fine-tuning.
+- Applied learning-rate scheduling and early stopping.
+- Evaluated predictions on unseen traffic-sign images and analyzed classification errors.
 
 ## Technologies
 
 - Python
 - PyTorch
 - Torchvision
-- ResNet18
+- NumPy
 - Matplotlib
 
-## Dataset Citation
+## Objective
 
-Stallkamp, J. et al. *The German Traffic Sign Recognition Benchmark: A multi-class classification competition.* IJCNN, 2011.
+Develop a model capable of recognizing and classifying traffic signs across 43 categories, supporting traffic-sign recognition research and intelligent transportation applications.
+
+## Dataset Reference
+
+Stallkamp et al., *The German Traffic Sign Recognition Benchmark: A multi-class classification competition*, IJCNN, 2011.
